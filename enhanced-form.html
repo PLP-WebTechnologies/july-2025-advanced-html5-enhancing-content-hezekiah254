@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="An enhanced HTML5 form with proper validation, structure, and accessibility." />
+  <meta name="author" content="Your Name" />
+  <title>Enhanced HTML5 Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+      line-height: 1.6;
+    }
+    header, main, footer {
+      max-width: 800px;
+      margin: auto;
+    }
+    form {
+      background: #f9f9f9;
+      padding: 1.5rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    label {
+      display: block;
+      margin-top: 1rem;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.3rem;
+      box-sizing: border-box;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 2rem;
+    }
+    table, th, td {
+      border: 1px solid #aaa;
+    }
+    th, td {
+      padding: 0.5rem;
+      text-align: left;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    ul {
+      list-style-type: disc;
+      margin-left: 1.5rem;
+    }
+    button {
+      margin-top: 1.5rem;
+      padding: 0.6rem 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Enhanced HTML5 Form Example</h1>
+    <p>This page showcases a fully accessible and semantically structured HTML5 form.</p>
+  </header>
+
+  <main>
+
+
+    <section aria-labelledby="form-section">
+      <h2 id="form-section">User Registration Form</h2>
+      <form action="#" method="POST" autocomplete="on">
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" name="fullname" placeholder="Jane Doe" required />
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="jane@example.com" required autocomplete="email" />
+
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="jane_doe" minlength="4" required />
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required minlength="6" placeholder="Enter password" autocomplete="new-password" />
+
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" name="dob" required min="1900-01-01" max="2020-12-31" />
+
+        <label for="country">Country</label>
+        <select id="country" name="country" required>
+          <option value="">-- Please select --</option>
+          <option value="us">United States</option>
+          <option value="uk">United Kingdom</option>
+          <option value="ca">Canada</option>
+        </select>
+
+        <label for="bio">Short Bio</label>
+        <textarea id="bio" name="bio" rows="4" placeholder="Tell us something about yourself..."></textarea>
+
+        <label for="readonly-info">Referral Code (Read-only)</label>
+        <input type="text" id="readonly-info" name="referral" value="AUTO12345" readonly />
+
+        <label for="newsletter">
+          <input type="checkbox" id="newsletter" name="newsletter" checked />
+          Subscribe to newsletter
+        </label>
+
+        <button type="submit">Register</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Enhanced Form Example. All rights reserved.</p>
+  </footer>
+</body>
+</html>
